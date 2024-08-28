@@ -1,10 +1,7 @@
-#! /usr/bin/env node
 import inquirer from "inquirer";
 let todos = [];
 let condition = true;
-while (condition)
-    ;
-{
+while (condition) {
     let addTask = await inquirer.prompt([
         {
             name: "todo",
@@ -15,17 +12,16 @@ while (condition)
             name: "addmore",
             type: "confirm",
             message: "Do you want to add more?",
-            default: "false"
+            default: "true"
         },
-        {
-            name: "sure",
-            type: "input",
-            message: "Are you sure you want to add more?"
-        }
+        // {
+        //     name : "sure",
+        //     type : "input",
+        //     message : "Are you sure you want to add more?"
+        // }
     ]);
     todos.push(addTask.todo);
-    condition = addTask.addmore;
     console.log(todos);
+    condition = addTask.addmore;
     // console.log(addTask.addmore);
 }
-;

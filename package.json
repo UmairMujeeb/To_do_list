@@ -1,6 +1,6 @@
 {
   "name": "umagwan_to-do-list",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "To do list using typescript, nodejs and inquirer",
   "main": "index.js",
   "type": "module",
